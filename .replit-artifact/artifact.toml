@@ -1,0 +1,21 @@
+kind = "web"
+previewPath = "/"
+title = "Stemmatters — Sistema de Qualidade ISO 9001"
+version = "1.0.0"
+id = "artifacts/stemmatters"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18505
+
+[services.development]
+run = "bash -c 'cd /home/runner/workspace/artifacts/stemmatters-flask && python app.py'"
+
+[services.env]
+PORT = "18505"
